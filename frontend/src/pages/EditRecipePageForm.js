@@ -12,7 +12,7 @@ export const EditRecipePageForm = ({ recipeToEdit }) => {
     const redirect = useNavigate();
 
     const editRecipe = async () => {
-        const response = await fetch(`https://web-dev-portfolio-mern-app-8277e063b97b.herokuapp.com/recipes/${recipeToEdit._id}`, {
+        const response = await fetch(`/recipes/${recipeToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify({ 
                 recipeName: recipeName, 
@@ -30,7 +30,7 @@ export const EditRecipePageForm = ({ recipeToEdit }) => {
             const errMessage = await response.json();
             alert(`The recipe could not be updated. The status code is '${response.status}.' The error message is: '${errMessage.Error}.'`);
         }
-        redirect("https://web-dev-portfolio-mern-app-8277e063b97b.herokuapp.com/recipes");
+        redirect("/recipes");
     }
 
     return (

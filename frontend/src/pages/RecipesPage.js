@@ -14,7 +14,7 @@ function RecipesPage({ setRecipe }) {
 
     // RETRIEVE the entire list of recipes
     const loadRecipes = async () => {
-        const response = await fetch('https://web-dev-portfolio-mern-app-8277e063b97b.herokuapp.com/recipes');
+        const response = await fetch('/recipes');
         const recipes = await response.json();
         setRecipes(recipes);
     } 
@@ -23,15 +23,15 @@ function RecipesPage({ setRecipe }) {
     // UPDATE a single recipe
     const onEditRecipe = async recipe => {
         setRecipe(recipe);
-        redirect("https://web-dev-portfolio-mern-app-8277e063b97b.herokuapp.com/update");
+        redirect("/update");
     }
 
 
     // DELETE a single recipe
     const onDeleteRecipe = async _id => {
-        const response = await fetch(`https://web-dev-portfolio-mern-app-8277e063b97b.herokuapp.com/recipes/${_id}`, { method: 'DELETE' });
+        const response = await fetch(`/recipes/${_id}`, { method: 'DELETE' });
         if (response.status === 200) {
-            const getResponse = await fetch('https://web-dev-portfolio-mern-app-8277e063b97b.herokuapp.com/recipes');
+            const getResponse = await fetch('/recipes');
             const recipes = await getResponse.json();
             setRecipes(recipes);
         } else {
@@ -39,7 +39,7 @@ function RecipesPage({ setRecipe }) {
         }
     }
 
-    const addRecipe = () => redirect('https://web-dev-portfolio-mern-app-8277e063b97b.herokuapp.com/create')
+    const addRecipe = () => redirect('/create')
 
     // LOAD all the recipes
     useEffect(() => {

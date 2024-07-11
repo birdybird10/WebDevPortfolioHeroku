@@ -16,7 +16,7 @@ export const AddRecipePageForm = () => {
 
     const addRecipe = async () => {
         const newRecipe = { recipeName, ingredients, instructions, numIngredients, dateCreated };
-        const response = await fetch('https://web-dev-portfolio-mern-app-8277e063b97b.herokuapp.com/recipes', {
+        const response = await fetch('/recipes', {
             method: 'post',
             body: JSON.stringify(newRecipe),
             headers: {
@@ -25,10 +25,10 @@ export const AddRecipePageForm = () => {
         });
         if(response.status === 201){
             alert(`The recipe for '${recipeName}' was successfully added.`);
-            redirect("https://web-dev-portfolio-mern-app-8277e063b97b.herokuapp.com/recipes");
+            redirect("/recipes");
         } else {
             alert(`The recipe could not be added. The status code is '${response.status}.'`);
-            redirect("https://web-dev-portfolio-mern-app-8277e063b97b.herokuapp.com/recipes");
+            redirect("/recipes");
         }
     };
 
