@@ -112,6 +112,6 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
 });
 
-app.listen(PORT, () => {
+app.listen(PORT || 3000, () => {
     console.log(`Server listening on port ${PORT}...`);
 });
