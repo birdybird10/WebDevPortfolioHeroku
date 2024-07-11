@@ -1,0 +1,544 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+/*   ----- Imports  -----  */
+/* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */
+/* @import "component1.css";   Component-specific stylesheets, if any.   */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Rokkitt:wght@300;600&display=swap");
+@import "~react-image-gallery/styles/css/image-gallery.css";
+/*   ----- Variables  -----  */
+:root {
+  --lightGreyBlue: rgba(210, 228, 229, 0.7);
+  --lightGreyBlueTransparent: rgba(210, 228, 229, 0.9);
+  --skyBlue: rgb(121, 180, 217);
+  --oceanBlue: rgb(55, 107, 140);
+  --navyBlue: rgb(71, 87, 113);
+  --navyBlueTransparent: rgb(71, 87, 113, 0.8);
+  --forestGreen: rgb(24, 38, 23);
+  --lightOrange: rgba(242, 200, 162, 0.8);
+  --lightPink: rgba(229, 216, 208, 0.85);
+  --custom-embellishment-name: ;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {
+  /* Can alternatively define in html {}. */
+  background-color: ;
+  background-image: url(images/colorado-mountains-sky-trees.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--oceanBlue);
+  font-family: "Rokkitt", serif; /* Define with at least one font name and its related generic family name.*/
+  margin: auto;
+  padding: 0;
+  max-width: 65%;
+  font-size: 18px;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  background-color: var(--lightPink);
+  padding: 0.2em 1em 0.2em 1em;
+  border-bottom: 1px solid var(--forestGreen);
+  text-align: center;
+}
+
+header img {
+  max-height: 4rem;
+}
+main {
+  background-color: var(--lightOrange);
+  margin-top: 0;
+  padding: 0.2em 1em 0.2em 1em;
+  border-bottom: 1px solid var(--forestGreen);
+  color: var(--navyBlue);
+}
+section {
+  background-color: var(--lightOrange);
+  padding: 0.2em 1em 0.2em 1em;
+  margin: 0;
+}
+article {
+  background-color: var(--lightOrange);
+  padding: 0.2em 1em 0.2em 1em;
+}
+#topic1 {
+}
+#topic2 {
+}
+div {
+}
+aside {
+  width: 20%;
+  margin: 15px;
+  padding: 5px;
+  border: 1px solid var(--forestGreen);
+  color: var(--forestGreen);
+  background-color: var(--lightPink);
+  float: right;
+  visibility: hidden;
+}
+footer {
+  background-color: var(--lightPink);
+  padding: 2%;
+  color: var(--forestGreen);
+  border-bottom: 1px solid var(--forestGreen);
+}
+
+/* ----- Anchors ----- Text links */
+a {
+}
+a:link {
+  color: var(--oceanBlue);
+}
+a:hover {
+  color: var(--skyBlue);
+}
+a:active {
+}
+a:visited {
+}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+
+nav {
+  background-color: #e5d8d0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--forestGreen);
+}
+nav a {
+  margin-right: 1em;
+  padding: 0.3em 1em 0.3em 1em;
+  text-align: center;
+  background-color: var(--lightGreyBlue);
+  color: var(--forestGreen);
+  border: 1px solid var(--skyBlue);
+  border-radius: 10%;
+  width: 5em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--oceanBlue);
+  color: var(--lightGreyBlue);
+}
+
+.local {
+  background-color: var(--lightOrange);
+}
+
+.local a {
+  color: var(--forestGreen);
+  background-color: var(--lightOrange);
+  border: none;
+  width: 8em;
+  padding: 0.6em;
+  margin: 0.1em;
+}
+
+.local a:hover {
+  background-color: var(--lightPink);
+  color: var(--forestGreen);
+}
+
+/*  -----  Typography  ----- */
+p {
+}
+br {
+}
+ol,
+ul,
+dl {
+}
+li {
+}
+dt {
+}
+dd {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+h1 {
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+
+abbr {
+}
+acronym {
+}
+address {
+}
+blockquote {
+}
+q {
+}
+cite {
+}
+em {
+}
+hr {
+}
+mark {
+}
+s {
+}
+span {
+}
+#orderQuantity {
+  padding: 5px;
+}
+strong {
+}
+sub {
+}
+sup {
+}
+time {
+}
+
+/*  ----- Coding or instructional typography ----- */
+pre {
+}
+code {
+}
+kbd {
+}
+samp {
+}
+var {
+}
+del {
+}
+ins {
+}
+
+/*  ----- Table ----- */
+table {
+  border-collapse: collapse;
+  margin: 10px 10px 25px 10px;
+  background-color: var(--lightGreyBlue);
+  color: var(--oceanBlue);
+}
+caption {
+  margin-bottom: 15px;
+  color: var(--forestGreen);
+}
+thead {
+}
+tbody {
+  text-align: left;
+  font-size: 16px;
+}
+tfoot {
+}
+tr {
+  border-bottom: 1px dashed var(--oceanBlue);
+  margin: 20px;
+}
+tr:nth-child(even) {
+}
+th {
+  padding-bottom: 10px;
+}
+td {
+  padding: 7px;
+}
+td:nth-child(1) {
+}
+colgroup {
+}
+data {
+}
+datalist {
+}
+table img {
+  width: 80px;
+  border: 2px solid var(--oceanBlue);
+}
+
+#staffTable {
+  visibility: hidden;
+  padding-right: 15px;
+  max-width: 80%;
+  font-size: 20px;
+}
+
+#orderingTable {
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+}
+
+#orderingTable td{
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+#orderingTable #price{
+  padding-left: 20px;
+}
+
+#recipes {
+  table-layout: fixed;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+#recipes caption {
+  color: var(--navyBlue);
+}
+
+
+#recipes td {
+  padding: 10px 7px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+#recipes th {
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+/*  ----- Form ----- */
+form,
+button,
+input,
+select,
+textarea {
+  font-family: "Rokkitt", serif;
+  font-size: 18px;
+  color: var(--forestGreen);
+}
+form {
+}
+
+fieldset {
+  border: 1px solid var(--forestGreen);
+  background-color: var(--lightPink);
+  margin-bottom: 2rem;
+  margin-right: 30px;
+  padding: 25px;
+  max-width: 100%;
+}
+legend {
+  background-color: var(--lightPink);
+  border: 1px solid var(--forestGreen);
+  color: var(--oceanBlue);
+  font-size: 20px;
+}
+label {
+  display: block;
+}
+
+button {
+  margin: 15px 0;
+  padding: 8px;
+}
+input {
+  padding: 10px;
+  margin: 4px 0 17px 0;
+  font-size: 110%;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 95%;
+}
+
+input[type="number"] {
+  width: 75px;
+}
+
+select {
+  margin-top: 7px;
+  padding: 5px;
+}
+optgroup {
+}
+option {
+}
+
+textarea {
+  margin: 5px 0 10px 0;
+  font-size: 110%;
+  height: 200px;
+  width: 98%;
+}
+
+#addRecipe {
+  margin-left: 20px;
+}
+
+#dataFromAPI {
+  background-color: var(--lightPink);
+  color: var(--forestGreen);
+  border: 1px var(--oceanBlue) solid;
+  border-radius: 10%;
+}
+
+#dataFromAPI:hover {
+  background-color: var(--oceanBlue);
+  color: var(--lightGreyBlue);
+}
+
+.rightAlign{
+  text-align: right;
+}
+
+output {
+}
+meter {
+}
+progress {
+}
+
+/* ----- Media ----- */
+figure {
+}
+figcaption {
+}
+figure img {
+}
+svg {
+}
+picture {
+}
+source {
+}
+iframe {
+}
+video {
+}
+audio {
+}
+embed {
+}
+object {
+}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.2em;
+  margin: 5%;
+  border: 5px dotted var(--lightGreyBlue);
+  color: var(--forestGreen);
+}
+
+.gallery figure {
+  max-width: 20rem;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.gallery img {
+  margin-bottom: 5px;
+  max-width: 100%;
+}
+
+.gallery figcaption {
+  max-width: 100%rem;
+  margin-bottom: 20px;
+}
+
+.image-gallery-slide .image-gallery-image {
+  margin-bottom: 150px;
+}
+
+.image-gallery-left-nav {
+  color: var(--skyBlue);
+}
+
+.image-gallery-right-nav {
+  color: var(--skyBlue);
+}
+
+.image-gallery-play-button {
+  color: var(--skyBlue);
+}
+
+.image-gallery-fullscreen-button {
+  color: var(--skyBlue);
+}
+
+.image-gallery-slide .image-gallery-description {
+  background: var(--lightGreyBlueTransparent);
+  color: var(--navyBlue);
+  margin-bottom: 20px;
+}
+
+.floatright {
+}
+.floatleft {
+}
+.center-middle {
+}
+
+.ten {
+}
+.twenty {
+}
+.thirty {
+}
+.forty {
+}
+.fifty {
+}
+.sixty {
+}
+.seventy {
+}
+.eighty {
+}
+
+.radius {
+}
+.circle {
+}
+.boxshadow {
+}
+.tshadow {
+}
+.gradient {
+}
+.shape {
+}
+
+@keyframes App-logo {
+}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {
+}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {
+}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {
+}

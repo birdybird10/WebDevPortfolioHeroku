@@ -1,0 +1,94 @@
+### CREATE five documents.
+POST http://localhost:3000/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "recipeName": "Vanilla Cake",
+    "ingredients": "flour, eggs, butter, sugar, vanilla",
+    "instructions": "Combine all ingredients and pour batter into a pan. Bake at 350 degrees for 45 minutes.",
+    "numIngredients": 5,
+    "dateCreated": "02-5-24"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "recipeName": "PB&J",
+    "ingredients": "peanut butter, jelly, bread",
+    "instructions": "Spread peanut butter on one piece of bread and jelly on the other. Then combine to make a sandwich.",
+    "numIngredients": 3,
+    "dateCreated": "02-5-24"
+}
+
+### CREATE 3
+POST http://localhost:3000/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "recipeName": "Cheese Pizza",
+    "ingredients": "dough, sauce, cheese",
+    "instructions": "Roll out the pizza dough. Spread sauce on top and sprinkle on cheese. Bake at 425 degrees for 20 minutes.",
+    "numIngredients": 3,
+    "dateCreated": "02-5-24"
+}
+
+### CREATE 4
+POST http://localhost:3000/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "recipeName": "Ants On A Log",
+    "ingredients": "celery, peanut butter, raisins",
+    "instructions": "Spread peanut butter onto the celery. Place raisins on top.",
+    "numIngredients": 3,
+    "dateCreated": "02-5-24"
+}
+
+### CREATE 5
+POST http://localhost:3000/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "recipeName": "Blueberry Banana Smoothie",
+    "ingredients": "blueberries, banana, yogurt, milk, ice",
+    "instructions": "Blend all ingredients in a blender until smooth.",
+    "numIngredients": 5,
+    "dateCreated": "02-5-24"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/recipes HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/recipes/65c146b38ebd19441c1ffe28 HTTP/1.1
+
+
+### UPDATE one document's recipeName, by ID.
+### Replace the ID in the following request with one that exists
+### and update the recipeName:
+PUT http://localhost:3000/recipes/65c146fd8ebd19441c1ffe32 HTTP/1.1
+content-type: application/json
+
+{
+    "recipeName": "Blueberry Banana Extravaganza",
+    "ingredients": "blueberries, banana, yogurt, milk, ice",
+    "instructions": "Blend all ingredients in a blender until smooth.",
+    "numIngredients": 5,
+    "dateCreated": "02-5-24"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/recipes/65c146f48ebd19441c1ffe2c HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/recipes HTTP/1.1
+

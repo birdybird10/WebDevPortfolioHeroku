@@ -1,0 +1,23 @@
+{
+  "name": "recipes-backend",
+  "version": "2023",
+  "description": "Backend web application for managing recipes.",
+  "main": "recipes-controller.mjs",
+  "scripts": {
+    "start": "node recipes-controller.mjs",
+    "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
+  },
+  "engines": {
+    "node": "22.3.0"
+  },
+  "author": "Allison Majors",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "nodemon": "^3.0.1",
+    "rest": "^2.0.0"
+  }
+}
