@@ -3,7 +3,7 @@
 import 'dotenv/config';
 import express from 'express';
 import * as recipes from './recipes-model.mjs';
-const path = require("path")
+import * as path from 'path';
 
 
 const PORT = process.env.PORT;
