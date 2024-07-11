@@ -2,7 +2,6 @@
 
 import 'dotenv/config';
 import express from 'express';
-const cors = require('cors');
 import * as recipes from './recipes-model.mjs';
 const path = require("path")
 
