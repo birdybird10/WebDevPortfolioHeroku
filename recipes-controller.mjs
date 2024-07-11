@@ -4,10 +4,14 @@ import 'dotenv/config';
 import express from 'express';
 import * as recipes from './recipes-model.mjs';
 import * as path from 'path';
-
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 const PORT = process.env.PORT;
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 app.use(express.static(path.join(__dirname, "frontend", "build")))
 app.use(express.json());  // REST needs JSON MIME type.
