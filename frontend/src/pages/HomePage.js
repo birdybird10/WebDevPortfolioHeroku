@@ -7,10 +7,7 @@ function HomePage(){
         <article>
             <p>
                 I am currently working hard on earning my BS in Computer Science from 
-                Oregon State University. 
-                Someday I hope to become a software developer or a full-stack developer. 
-                I enjoy working with React and am interested in developing more web 
-                applications.
+                Oregon State University and someday hope to become a software developer. 
             </p>
             <p>The following technologies are employed in this web application:</p>
                 <dl>
